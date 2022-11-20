@@ -9,3 +9,4 @@ $(PROG): $(OBJS)
 
 clean:
 	rm -rf $(PROG) $(OBJS)
+	
