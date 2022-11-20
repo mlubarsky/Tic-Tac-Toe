@@ -18,23 +18,19 @@ char who_won(char board[3][3]){
 	
 	//check columns
 	for (int col = 0; col < 3; col++) {
-		if (board[0][col] == board[1][col] && board[1][col] == board[2][col]
-		&& (board[0][col] == 'X' || board[0][col] == 'O')) {
+		if (board[0][col] == board[1][col] && board[1][col] == board[2][col] && 
+		   (board[0][col] == 'X' || board[0][col] == 'O')) {
 			return board[0][col];
 		}
 	}
 
 	//check diagonals
-	if ((board[0][0] == board[1][1] &&
-		 board[1][1] == board[2][2] &&
-		(board[0][0] == 'X' || board[0][0] == 'O')) ||
-		(board[0][2] == board[1][1] &&
-	     board[1][1] == board[2][0] &&
-		(board[0][2] == 'X' || board[0][2] == 'O'))) {
-			return board[1][1];
-		} else {
-			return '_';
-		}
+	if ((board[0][0] == board[1][1] && board[1][1] == board[2][2] && (board[0][0] == 'X' || board[0][0] == 'O')) ||
+	    (board[0][2] == board[1][1] && board[1][1] == board[2][0] && (board[0][2] == 'X' || board[0][2] == 'O'))) {
+		return board[1][1];
+	} else {
+		return '_';
+	}
 }
 
 //check if a space on the board is empty
